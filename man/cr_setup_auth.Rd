@@ -19,8 +19,8 @@ cr_setup_auth(
 leave \code{NULL} to be prompted}
 }
 \value{
-TRUE if the file is ready to be setup by \link{cr_setup},
-`FALSE` if need to stop
+\code{TRUE} if the file is ready to be setup by \link{cr_setup},
+\code{FALSE} if need to stop
 }
 \description{
 This will use your Google OAuth2 user to create a suitable service account

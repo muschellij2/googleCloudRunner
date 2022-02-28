@@ -73,16 +73,12 @@
 #'                        error = function(err) FALSE)
 #' if (have_project && have_bucket) {
 #'   bs <- cr_buildstep_targets_multi()
-#'
-#' bs <- cr_buildstep_targets_multi()
-#'
-#' # only create the yaml
-#' par_build <- cr_build_targets(bs, path = NULL)
-#' par_build
-#'
-#' # clean up example
-#' unlink("mtcars.csv")
-#' unlink("_targets.R")
+#'   # only create the yaml
+#'   par_build <- cr_build_targets(bs, path = NULL)
+#'   par_build
+#'   # clean up example
+#'   unlink("_targets.R")
+#' }
 #'
 #' \dontrun{
 #' # run it immediately in cloud

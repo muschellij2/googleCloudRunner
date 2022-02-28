@@ -2,7 +2,7 @@
 % Please edit documentation in R/docker.R
 \name{cr_buildstep_docker_auth}
 \alias{cr_buildstep_docker_auth}
-\title{Authorize Docker using `gcloud auth configure-docker`}
+\title{Authorize Docker using \code{gcloud auth configure-docker}}
 \usage{
 cr_buildstep_docker_auth(image, ...)
 }
@@ -16,7 +16,7 @@ authorization, or simply the registry.}
 A buildstep
 }
 \description{
-Authorize Docker using `gcloud auth configure-docker`
+Authorize Docker using \code{gcloud auth configure-docker}
 }
 \examples{
 cr_buildstep_docker_auth("us.gcr.io")

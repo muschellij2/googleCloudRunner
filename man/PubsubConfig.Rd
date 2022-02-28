@@ -27,5 +27,5 @@ A PubsubConfig object
 PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
 }
 \seealso{
-`https://cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PubsubConfig`
+\url{https://cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PubsubConfig}
 }

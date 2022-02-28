@@ -522,7 +522,7 @@ find_dockerfile <- function(local, dockerfile) {
 }
 
 
-#' Authorize Docker using `gcloud auth configure-docker`
+#' Authorize Docker using \code{gcloud auth configure-docker}
 #'
 #' @param image name of the Docker image to push or pull from that needs
 #' authorization, or simply the registry.
