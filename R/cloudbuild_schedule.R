@@ -177,7 +177,7 @@ cr_schedule_build <- function(build,
 
 }
 
-check_topic_exists <- function(topic, projectId) {
+check_topic_exists <- function(topic) {
   x <- try({
     googlePubsubR::topics_get(topic)
     }, silent = TRUE)
@@ -195,7 +195,7 @@ check_pubsub_topic <- function(schedule_pubsub, run_name,
   check_package_installed("googlePubsubR")
 
   myMessage("Creating PubSub topic:", topic_basename, level = 3)
-  if (!check_topic_exists(topic_basename, projectId = projectId)) {
+  if (!check_topic_exists(topic_basename)) {
     topic_created <- tryCatch(
       googlePubsubR::topics_create(topic_basename),
       error = function(err) {
