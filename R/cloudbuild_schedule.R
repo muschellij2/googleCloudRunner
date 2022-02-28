@@ -386,7 +386,6 @@ cr_schedule_pubsub <- function(topicName,
     the_attributes <- PubsubMessage$attributes
   }
 
-
   PubsubTarget(
     topicName = the_name,
     data = the_data,
