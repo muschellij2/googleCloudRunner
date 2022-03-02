@@ -69,18 +69,20 @@ cr_run <- function(image,
   run_yaml <- cr_build_yaml(
     steps = c(
       cr_buildstep_docker_auth(image = image),
-      cr_buildstep_run(name = name,
-                       image = image,
-                       allowUnauthenticated = allowUnauthenticated,
-                       region = region,
-                       concurrency = concurrency,
-                       port = port,
-                       max_instances = max_instances,
-                       memory = memory,
-                       cpu = cpu,
-                       env_vars = env_vars,
-                       gcloud_args = gcloud_args,
-                       ...)
+      cr_buildstep_run(
+        name = name,
+        image = image,
+        allowUnauthenticated = allowUnauthenticated,
+        region = region,
+        concurrency = concurrency,
+        port = port,
+        max_instances = max_instances,
+        memory = memory,
+        cpu = cpu,
+        env_vars = env_vars,
+        gcloud_args = gcloud_args,
+        ...
+      )
     )
   )
 

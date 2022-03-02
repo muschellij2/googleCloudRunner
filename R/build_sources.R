@@ -351,7 +351,7 @@ cr_buildstep_source_move <- function(deploy_folder) {
       paste0("ls -R /workspace/; ",
              '[ -d "/workspace/%s" ] && ',
              "cd /workspace/%s && mv * ../; ls -R /workspace/"),
-            deploy_folder, deploy_folder),
+      deploy_folder, deploy_folder),
     id = "move source files"
   )
 }

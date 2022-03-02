@@ -143,6 +143,7 @@ cr_buildtrigger_repo <- function(repo_name,
     repo <- do.call(RepoSource, args = dots)
   }
 
+
   structure(list(
     repo = repo,
     github_secret = github_secret,
