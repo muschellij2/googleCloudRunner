@@ -177,7 +177,7 @@ is.gar_webhookConfig <- function(x) {
 #' @noRd
 GitRepoSource <- function(uri,
                           ref,
-                          repoType = c("GITHUB","CLOUD_SOURCE_REPOSITORIES"),
+                          repoType = c("GITHUB", "CLOUD_SOURCE_REPOSITORIES"),
                           allow_regex = FALSE) {
 
   assert_that(

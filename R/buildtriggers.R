@@ -545,7 +545,7 @@ cr_buildtrigger_copy <- function(buildTrigger,
   }
   if (!is.null(disabled)) buildTrigger$disabled <- disabled
 
-  if(!is.null(sourceToBuild)) buildTrigger$sourceToBuild <- sourceToBuild
+  if (!is.null(sourceToBuild)) buildTrigger$sourceToBuild <- sourceToBuild
 
   buildTrigger <- as.BuildTrigger(buildTrigger)
   url <- sprintf(
