@@ -426,7 +426,7 @@ as.buildTriggerResponse <- function(x) {
     o$build <- as.gar_Build(x$build)
   }
 
-  if (!is.null(o$pubsubConfig)){
+  if (!is.null(o$pubsubConfig)) {
     o$pubsubConfig <- as.gar_pubsubConfig(o$pubsubConfig)
   }
 
