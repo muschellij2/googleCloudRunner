@@ -386,7 +386,7 @@ cr_buildtrigger_build <- function(
 
   if (!is.null(sourceToBuild)) {
     assertthat::assert_that(is.buildtrigger_repo(sourceToBuild))
-    sourceToBuild <- as.gitRepoSource(sourceToBuild)
+    sourceToBuild <- as.gitRepoSource(sourceToBuild, allow_regex = TRUE)
 
     if (is.buildtrigger_repo(trigger)) {
       stop("Can't use sourceToBuild for git based triggers", call. = FALSE)
