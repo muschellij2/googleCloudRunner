@@ -184,8 +184,7 @@ check_topic_exists <- function(topic) {
   !inherits(x, "try-error")
 }
 
-check_pubsub_topic <- function(schedule_pubsub, run_name,
-                               projectId){
+check_pubsub_topic <- function(schedule_pubsub, run_name){
   if (!is.null(schedule_pubsub)) {
     assertthat::assert_that(is.gar_pubsubTarget(schedule_pubsub))
     topic_basename <- basename(schedule_pubsub$topicName)
@@ -194,8 +193,6 @@ check_pubsub_topic <- function(schedule_pubsub, run_name,
   }
   check_package_installed("googlePubsubR")
   suppressMessages(googlePubsubR::ps_project_set(cr_project_get()))
-
-  topic_basename <- paste0(run_name, "-topic")
 
   myMessage("Creating PubSub topic:", topic_basename, level = 3)
   if (!check_topic_exists(topic_basename)) {
@@ -228,8 +225,7 @@ create_pubsub_target <- function(build, schedule_pubsub, run_name,
                                  trigger_name = NULL,
                                  ...) {
 
-  topic_basename <- check_pubsub_topic(schedule_pubsub, run_name,
-                                       projectId)
+  topic_basename <- check_pubsub_topic(schedule_pubsub, run_name)
   if (!is.null(schedule_pubsub)) {
     assertthat::assert_that(is.gar_pubsubTarget(schedule_pubsub))
     # so it will pass cr_schedule_pubsub
