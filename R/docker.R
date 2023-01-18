@@ -210,7 +210,7 @@ cr_deploy_docker_construct <- function(
             level = 2
   )
 
-  myMessage(paste("Configuring Dockerfile"), level = 2)
+  myMessage("Configuring Dockerfile", level = 2)
 
   # needed if someone does something silly like:
   # res = cr_buildstep_bash("echo hey")
