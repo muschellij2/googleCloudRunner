@@ -332,6 +332,7 @@ cr_buildstep_run <- function(name,
     args = c(
       "gcloud",
       "run", "services", "add-iam-policy-binding",
+      "--quiet",
       paste0("--region=", region),
       paste0("--member=", member),
       "--role=roles/run.invoker",
